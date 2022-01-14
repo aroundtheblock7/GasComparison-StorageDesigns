@@ -36,7 +36,7 @@ contract GasConsumptionMappings {
         return true;
     }
 
-    // UPDATE OPTION 1- use a require to make sure you update right entry
+    // UPDATE OPTION 1- use a require to make sure only msg.sender can update.
     function updateEntity(uint256 data, address _address) public {
         require(
             entityMapping[_address]._address == msg.sender,
