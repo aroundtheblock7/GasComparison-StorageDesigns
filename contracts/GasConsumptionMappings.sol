@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.6;
 
-contract MappingGasCost {
+contract GasConsumptionMappings {
     struct Entity {
         uint256 data;
         address _address;
@@ -27,7 +27,7 @@ contract MappingGasCost {
     // }
 
     // Add Option 4 - Use require to make sure msg.sender != to address so we don't overwrite data! Return bool though not necessary.
-    function addEnitty(uint256 data) public returns (bool success) {
+    function addEntity(uint256 data) public returns (bool success) {
         require(
             entityMapping[msg.sender]._address != msg.sender,
             "This address already as data"
